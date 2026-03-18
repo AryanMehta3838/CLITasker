@@ -1,0 +1,14 @@
+cat > .gitignore <<'EOF'
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
+.env
+.venv/
+venv/
+tasks.json
