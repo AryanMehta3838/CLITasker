@@ -22,36 +22,68 @@ Tasker lets you define and execute reusable shell commands with simple, memorabl
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/CLITasker.git
+git clone https://github.com/aryanmehta3838/CLITasker.git
 cd CLITasker
+```
 
-Usage
-List tasks
+## Usage
+
+### List tasks
+```bash
 python3 main.py list
-Add a task
+```
+
+### Add a task
+```bash
 python3 main.py add build "npm run build"
-Show a task
+```
+
+### Show a task
+```bash
 python3 main.py show build
-Run a task
+```
+
+### Run a task
+```bash
 python3 main.py run build
-Remove a task
+```
+
+### Remove a task
+```bash
 python3 main.py remove build
-Example
+```
+
+## Example
+
+```bash
 python3 main.py add hello "echo hello world"
 python3 main.py run hello
+```
+
 Output:
+```
 hello world
-Storage
-Tasks are stored locally in a JSON file:
-tasks.json
-This file is created automatically
-It is intentionally ignored by Git
+```
+
+## Storage
+
+Tasks are stored locally in a JSON file: `tasks.json`
+
+- This file is created automatically
+- It is intentionally ignored by Git
+
 Each task is stored as:
+
+```json
 {
   "build": "npm run build",
   "dev": "npm run dev"
 }
-Project Structure
+```
+
+## Project Structure
+
+```
 .
 ├── main.py        # CLI entry point
 ├── storage.py     # Load/save tasks
@@ -59,5 +91,10 @@ Project Structure
 ├── tests/         # Unit tests
 ├── .gitignore
 └── README.md
-Running Tests
+```
+
+## Running Tests
+
+```bash
 python3 -m unittest discover -s tests -v
+```
